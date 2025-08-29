@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    ></meta>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    ></meta>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous"
+    ></link>
+
+    <title>Cinema Lingua</title>
+</head>
+
+<body>
+    <div class="container">
+        {% block content %}
+
+        <h1 class="text-center">Cinema Lingua</h1>
+
+        <p class="text-center">
+            Learn a language through movies! Enter your preferred
+                language and country to get movie recommendations.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 order-md-last">
+                <form
+                    method="POST"
+                    action="info"
+                >
+                    <div class="form-group">
+                        <h4 class="form-label">Language*</h4>
+
+                        <input
+                            type="text"
+                            name="language"
+                            placeholder="Enter language"
+                            class="form-control"
+                        ></input>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group">
+                        <h4 class="form-label">Country*</h4>
+
+                        <input
+                            type="text"
+                            name="country"
+                            placeholder="Enter country"
+                            class="form-control"
+                        ></input>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group">
+                        <h4 class="form-label">Provider</h4>
+
+                        <input
+                            type="text"
+                            name="provider"
+                            placeholder="Enter provider (e.g., Netflix)"
+                            class="form-control"
+                        ></input>
+                        
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group">
+                        <h4 class="form-label">Genre(s)</h4>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="action"
+                            id="action"
+                        ></input>
+                        <label for="action">Action</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="adventure"
+                            id="adventure"
+                        ></input>
+                        <label for="adventure">Adventure</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="animation"
+                            id="animation"
+                        ></input>
+                        <label for="animation">Animation</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="comedy"
+                            id="comedy"
+                        ></input>
+                        <label for="comedy">Comedy</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="crime"
+                            id="crime"
+                        ></input>
+                        <label for="crime">Crime</label>
+
+                        <br>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="documentary"
+                            id="documentary"
+                        ></input>
+                        <label for="documentary">Documentary</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="drama"
+                            id="drama"
+                        ></input>
+                        <label for="drama">Drama</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="family"
+                            id="family"
+                        ></input>
+                        <label for="family">Family</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="fantasy"
+                            id="fantasy"
+                        ></input>
+                        <label for="fantasy">Fantasy</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="history"
+                            id="history"
+                        ></input>
+                        <label for="history">History</label>
+
+                        <br>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="horror"
+                            id="horror"
+                        ></input>
+                        <label for="horror">Horror</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="music"
+                            id="music"
+                        ></input>
+                        <label for="music">Music</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="mystery"
+                            id="mystery"
+                        ></input>
+                        <label for="mystery">Mystery</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="romance"
+                            id="romance"
+                        ></input>
+                        <label for="romance">Romance</label>
+
+                        <br>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="science fiction"
+                            id="science-fiction"
+                        ></input>
+                        <label for="science-fiction">Science Fiction</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="tv movie"
+                            id="tv-movie"
+                        ></input>
+                        <label for="tv-movie">TV Movie</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="thriller"
+                            id="thriller"
+                        ></input>
+                        <label for="thriller">Thriller</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="war"
+                            id="war"
+                        ></input>
+                        <label for="war">War</label>
+
+                        <input
+                            type="checkbox"
+                            name="genres"
+                            value="western"
+                            id="western"
+                        ></input>
+                        <label for="western">Western</label>
+
+                    </div>
+
+                    <hr>
+
+                    <p class="text-muted">
+                        *Indicates a required field
+                    </p>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >Submit</button>
+                </form>
+
+                {% if error %}
+
+                <p class="alert alert-danger mt-3">{{ error }}</p>
+
+                {% endif %}
+            </div>
+        </div>
+
+        {% endblock %}
+    </div>
+
+    <style>
+        body {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+</body>
+</html>

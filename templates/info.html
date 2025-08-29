@@ -1,0 +1,155 @@
+{% extends "index.html" %}
+
+<body>
+    <div class="container">
+        {% block content %}
+
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                    <div class="container">
+                        <a
+                            class="navbar-brand"
+                            href="/"
+                        >Cinema Lingua</a>
+                    </div>
+                </nav>
+
+                <div style="height: 70px;"></div>
+                <!-- Spacer to prevent content from being hidden under the fixed navbar -->
+            </header>
+
+            <h1 class="text-center">
+                {{  info.country }} Movies in {{ info.language }}
+            </h1>
+
+            {% if info.genres %}
+                <h3 class="text-center">
+                    Genre(s): {{ info.genres | join(', ') | capitalize}}
+                </h3>
+            {% endif %}
+
+            {% if info.provider %}
+                <h3 class="text-center">
+                    Provider: {{ info.provider }}
+                </h3> 
+            {% endif %}
+
+            <hr>
+
+            <div class="d-flex flex-column align-items-center">
+                {% if titles %}
+
+                    {% for title in titles %}
+
+                        <h4 class="text-center">{{ title }}</h4>
+
+                        {% if release_dates[loop.index0] %}
+
+                            <h6 class="text-center">
+                                Release Date: {{ release_dates[loop.index0] }}
+                            </h6>
+
+                        {% else %}
+
+                            <h6 class="text-center">Release Date: N/A</h6>
+
+                        {% endif %}
+                                
+
+                        {% if overviews[loop.index0] %}
+
+                            <p class="justify-text">
+                                Overview: {{ overviews[loop.index0] }}
+                            </p>
+
+                        {% else %}
+
+                            <p class="justify-text">Overview: N/A</p>
+
+                        {% endif %}
+
+                        {% if poster_paths[loop.index0] %}
+
+                            <img
+                                src="https://image.tmdb.org/t/p/w500{{ poster_paths[loop.index0] }}"
+                                alt="Poster for {{ title }}"
+                                class="img-fluid mb-3"
+                                width="150"
+                                height="350"
+                            >
+
+                        {% else %}
+
+                            <p class="text-center">No poster available.</p>
+
+                        {% endif %}
+
+                        <hr class="w-100">
+                    {% endfor %}
+            
+                {% else %}
+
+                    <p>
+                        No items to display or error fetching data.
+                    </p>
+
+                {% endif %}
+
+                <div class="pagination">
+                    {% if info.page == 1 %}
+
+                        <button class="btn btn-outline-primary mt-2 text-center">
+                            <a
+                                href="/"
+                                class="text-reset text-decoration-none"
+                            >Previous</a>
+                        </button>
+
+                    {% endif %}
+
+                    {% if info.page > 1 %}
+
+                        <button class="btn btn-outline-primary mt-2 text-center">
+                            <a
+                                href="{{ url_for('info', country=info.country, language=info.language, page=info.page-1) }}"
+                                class="text-reset text-decoration-none"
+                            >Previous</a>
+                        </button>
+
+                    {% endif %}
+
+                    <span>
+                        Page {{ info.page }} of {{ info.total_pages }}
+                    </span>
+
+                    {% if info.page < info.total_pages %}
+
+                        <button class="btn btn-outline-primary mt-2 text-center">
+                            <a
+                                href="{{ url_for('info', country=info.country, language=info.language, page=info.page+1) }}"
+                                class="text-reset text-decoration-none"
+                            >Next</a>
+                        </button>
+
+                    {% endif %}
+                </div>
+            </div>
+
+            <style>
+                .justify-text {
+                    text-align: justify;
+                    max-width: 500px;
+                }
+
+                .pagination {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    margin-top: 20px;
+                }
+            </style>
+
+        {% endblock %}
+    </div>
+</body>
