@@ -20,8 +20,6 @@ def index():
 
 @app.route("/info", methods=["GET", "POST"])
 def info():
-    # if request.method == "GET":
-    #     return redirect("/")  # Redirects user back to root page
     if request.method == "GET":
         # Get page number from query params, default to 1
         page = request.args.get("page", default=1, type=int)

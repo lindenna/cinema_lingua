@@ -111,7 +111,7 @@
 
                         <button class="btn btn-outline-primary mt-2 text-center">
                             <a
-                                href="{{ url_for('info', country=info.country, language=info.language, page=info.page-1) }}"
+                                href="{{ url_for('info', country=info.country, language=info.language, provider=info.provider, page=info.page-1) }}"
                                 class="text-reset text-decoration-none"
                             >Previous</a>
                         </button>
@@ -126,7 +126,7 @@
 
                         <button class="btn btn-outline-primary mt-2 text-center">
                             <a
-                                href="{{ url_for('info', country=info.country, language=info.language, page=info.page+1) }}"
+                                href="{{ url_for('info', country=info.country, language=info.language, provider=info.provider, page=info.page+1) }}"
                                 class="text-reset text-decoration-none"
                             >Next</a>
                         </button>

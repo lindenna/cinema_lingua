@@ -7,7 +7,7 @@ Cinema Lingua is a web application designed to help users learn languages throug
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+  - [Useful resources](#useful-resources) 
 
 ## My process
 
