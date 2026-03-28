@@ -3,11 +3,24 @@
 Cinema Lingua is a web application designed to help users learn languages through movies. This platform allows users to find movies for a target language and country. Additionally, the user's search can be further refined by including preferred movie provider and genres. 
 
 ## Table of contents
+- [Initialize Web App](#initialize-web-app)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources) 
+
+
+## Initialize Web App
+To view the web app, run `python main.py` in your terminal.
+
+Enter your preferences on this page:
+
+![preferences page](home.png)
+
+Click submit to see movies that match your preferences:
+
+![movie options](results.png)
 
 ## My process
 
