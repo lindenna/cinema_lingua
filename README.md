@@ -16,11 +16,11 @@ To view the web app, run `python main.py` in your terminal.
 
 Enter your preferences on this page:
 
-![preferences page](home.png)
+![preferences page](images/home.png)
 
 Click submit to see movies that match your preferences:
 
-![movie options](results.png)
+![movie options](images/results.png)
 
 ## My process
 
