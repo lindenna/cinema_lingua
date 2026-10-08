@@ -1,6 +1,6 @@
 # Cinema Lingua
 
-Cinema Lingua is a web application designed to help users learn languages through movies. This platform allows users to find movies for a target language and country. Additionally, the user's search can be further refined by including preferred movie provider and genres. 
+Cinema Lingua is a web application designed to help users learn languages through movies. This platform allows users to find movies for a target language and country. Additionally, the user's search can be further refined by including preferred movie provider and genres. <br> Cinema Lingua is now live at [https://cinema-lingua.onrender.com/](https://cinema-lingua.onrender.com/)!
 
 ## Table of contents
 - [Initialize Web App](#initialize-web-app)
